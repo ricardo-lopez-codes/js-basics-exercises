@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Basics - Interactive Testbench</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-container">
+    <header class="page-header">
+      <div class="header-content">
+        <h1>JavaScript Basics Testbench</h1>
+        <p class="subtitle">Structured Exercises 1–10: Arrays, Functions, Objects & DOM</p>
+      </div>
+      <button id="theme-toggle-btn" class="secondary-btn" type="button">Toggle Accent Mode</button>
+    </header>
+
+    <main class="grid-layout">
+      <section class="card">
+        <div class="card-header">
+          <span class="badge">Exercise 08</span>
+          <h2>Dynamic List Creation & Removal</h2>
+        </div>
+        <p class="card-description">Add new dynamic items to the reactive list or remove them while maintaining a live counter.</p>
+        <div class="form-row">
+          <input type="text" id="item-input" placeholder="Enter new item text...">
+          <button id="add-item-btn" class="primary-btn" type="button">Add Item</button>
+        </div>
+        <div class="counter-row">
+          <span class="label">Total items:</span>
+          <span id="item-counter" class="counter-badge">0 items</span>
+        </div>
+        <ul id="item-list" class="interactive-list"></ul>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <span class="badge">Exercise 09</span>
+          <h2>Live Search & Real-Time Filter</h2>
+        </div>
+        <p class="card-description">Instant client-side list filtering as query keystrokes are registered via input events.</p>
+        <div class="form-row">
+          <input type="text" id="search-input" placeholder="Type to filter topics in real time...">
+        </div>
+        <div class="counter-row">
+          <span class="label">Status:</span>
+          <span id="filter-count" class="counter-badge">Showing 8 of 8</span>
+        </div>
+        <ul id="search-list" class="interactive-list">
+          <li class="filter-item">Array Higher-Order Methods (map, filter, reduce)</li>
+          <li class="filter-item">Closures & Lexical Scoping Patterns</li>
+          <li class="filter-item">Immutable State Updates & Object Spread</li>
+          <li class="filter-item">DOM Tree Traversal & Dynamic Node Injection</li>
+          <li class="filter-item">Event Delegation & Event Listeners</li>
+          <li class="filter-item">Asynchronous JavaScript & Promises</li>
+          <li class="filter-item">Pure Functions & Side-Effect Isolation</li>
+          <li class="filter-item">String Manipulation & Regular Expressions</li>
+        </ul>
+      </section>
+
+      <section class="card full-width">
+        <div class="card-header">
+          <span class="badge">Exercise 10</span>
+          <h2>Theme State, Form Validation & Output Runner</h2>
+        </div>
+        <div class="dual-column">
+          <div class="column-block">
+            <h3>Interactive Form Validation</h3>
+            <p class="card-description">Validates inputs live without full page reload and supplies contextual inline feedback.</p>
+            <form id="contact-form" novalidate>
+              <div class="field-group">
+                <label for="form-name">Full Name</label>
+                <input type="text" id="form-name" placeholder="Jane Doe">
+                <span id="name-feedback" class="feedback-msg"></span>
+              </div>
+              <div class="field-group">
+                <label for="form-email">Email Address</label>
+                <input type="email" id="form-email" placeholder="jane@example.com">
+                <span id="email-feedback" class="feedback-msg"></span>
+              </div>
+              <div class="field-group">
+                <label for="form-message">Feedback Message</label>
+                <textarea id="form-message" rows="3" placeholder="Enter at least 10 characters..."></textarea>
+                <span id="message-feedback" class="feedback-msg"></span>
+              </div>
+              <button id="form-submit-btn" class="primary-btn" type="submit">Submit Feedback</button>
+              <div id="form-status" class="status-box"></div>
+            </form>
+          </div>
+
+          <div class="column-block">
+            <h3>Console Exercises 1–7 Live Output</h3>
+            <p class="card-description">Execute exercises 1–7 directly in the browser and stream results into the viewport.</p>
+            <div class="button-group">
+              <button id="run-exercises-btn" class="accent-btn" type="button">Run Console Exercises</button>
+              <button id="clear-console-btn" class="secondary-btn" type="button">Clear Output</button>
+            </div>
+            <pre id="console-output" class="output-terminal">Click "Run Console Exercises" to inspect outputs for Exercises 1–7.</pre>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="exercises/01-arrays-functions.js"></script>
+  <script src="exercises/02-objects.js"></script>
+  <script src="exercises/03-dom.js"></script>
+</body>
+</html>
